@@ -11,6 +11,9 @@ RUN /usr/bin/config-supervisord.sh supervisor
 RUN /usr/bin/config-supervisord.sh logviewer
 
 
+# Install latest Node.js version
+RUN wget -O - https://deb.nodesource.com/setup | bash -
+RUN apt-get install -y build-essential nodejs
 
 
 CMD /usr/bin/start-supervisor.sh
