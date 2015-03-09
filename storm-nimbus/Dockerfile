@@ -1,7 +1,7 @@
-FROM wurstmeister/storm:0.9.3
+FROM wurstmeister/storm
 MAINTAINER Wurstmeister
 
-RUN /usr/bin/config-supervisord.sh nimbus 
+RUN /usr/bin/config-supervisord.sh nimbus
 RUN /usr/bin/config-supervisord.sh drpc
 
 EXPOSE 6627
